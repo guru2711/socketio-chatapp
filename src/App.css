@@ -37,7 +37,7 @@
   }
 }
 
- */
+*/
 
 .App {
   width: 100vw;
@@ -47,6 +47,11 @@
   font-family: "Open Sans", sans-serif;
   display: grid;
   place-items: center;
+  background-image: url("./math-U5mHl-uACe0-unsplash.jpg");
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body {
   margin: 0%;
@@ -230,3 +235,9 @@ body {
 .hide {
   opacity: 0 !important;
 }
+
+/* .users {
+  background: beige;
+  outline: 3px solid rgb(216, 15, 15);
+  width: 14rem;
+} */

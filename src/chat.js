@@ -30,12 +30,13 @@ export default function Chat({ socket, username, room }) {
   }, [socket]);
 
   useEffect(() => {
-    toast(`welcome, You are in  Room: ${room}`);
-  }, []);
+    toast(`welcome ${username}, You are in  Room: ${room}`);
+  }, [room, username]);
 
   return (
     <div className="chat-window">
       <ToastContainer />
+      <div className="users">{username}</div>
       <div className="chat-header">
         <p>Room : {room}</p>
       </div>
@@ -73,7 +74,11 @@ export default function Chat({ socket, username, room }) {
             e.key === "Enter" && sendMsg();
           }}
         />
-        <button onClick={sendMsg}>send</button>
+        <button onClick={sendMsg}>
+          <i className="material-icons" style={{ color: "yellow" }}>
+            send
+          </i>
+        </button>
       </div>
     </div>
   );

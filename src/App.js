@@ -16,33 +16,41 @@ function App() {
       setShowChat(true);
 
       // console.log(username + " " + room);
+    } else {
+      alert("please... fill all the fields 👈🏻");
     }
   };
 
   return (
-    <div className="App">
-      {!chat ? (
-        <div className="joinChatContainer">
-          <h3>Join a Chat</h3>
-          <input
-            type="text"
-            placeholder="Name..."
-            onChange={(event) => {
-              setUsername(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Room ID..."
-            onChange={(event) => {
-              setRoom(event.target.value);
-            }}
-          />
-          <button onClick={joinRoom}>Join A Room</button>
-        </div>
-      ) : (
-        <Chat socket={socket} username={username} room={room} />
-      )}
+    <div className="img">
+      <div className="App">
+        {!chat ? (
+          <div className="joinChatContainer">
+            <h3>
+              <i style={{ fontFamily: "cursive", color: "whitesmoke" }}>
+                Join a Chat
+              </i>
+            </h3>
+            <input
+              type="text"
+              placeholder="Name U Like..."
+              onChange={(event) => {
+                setUsername(event.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Room ID..."
+              onChange={(event) => {
+                setRoom(event.target.value);
+              }}
+            />
+            <button onClick={joinRoom}>Join A Room</button>
+          </div>
+        ) : (
+          <Chat socket={socket} username={username} room={room} />
+        )}
+      </div>
     </div>
   );
 }
