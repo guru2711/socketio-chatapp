@@ -28,7 +28,7 @@ function App() {
           <div className="joinChatContainer">
             <h3>
               <i style={{ fontFamily: "cursive", color: "whitesmoke" }}>
-                Join a Chat
+                Join a Cha
               </i>
             </h3>
             <input
