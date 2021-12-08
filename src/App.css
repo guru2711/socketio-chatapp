@@ -236,8 +236,6 @@ body {
   opacity: 0 !important;
 }
 
-/* .users {
-  background: beige;
-  outline: 3px solid rgb(216, 15, 15);
-  width: 14rem;
-} */
+.users {
+  color: beige;
+}
