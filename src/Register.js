@@ -39,7 +39,7 @@ function Register() {
     }
 
     try {
-      await axios.post("http://localhost:3001/api/register", {
+      await axios.post("https://socketio-chata.herokuapp.com/api/register", {
         username: name,
         email: email,
         password: password,

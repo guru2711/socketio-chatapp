@@ -25,7 +25,7 @@ export default function Login({ handleAuth }) {
     }
 
     try {
-      await axios.post("http://localhost:3001/api/login", {
+      await axios.post("https://socketio-chata.herokuapp.com/api/login", {
         email: email,
         password: password,
       });
